@@ -1,7 +1,7 @@
 
-import Order from "../../domain/entity/order";
-import OrderItemModel from "../db/sequelize/model/order-item.model";
-import OrderModel from "../db/sequelize/model/order.model";
+import Order from "../entity/order";
+import OrderItemModel from "../../../infrastructure/db/sequelize/model/order-item.model";
+import OrderModel from "../../../infrastructure/db/sequelize/model/order.model";
 
 export default class OrderRepository {
 
