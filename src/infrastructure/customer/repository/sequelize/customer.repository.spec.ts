@@ -10,9 +10,9 @@ describe("Customer Repository Test", () => {
     beforeEach(async() => {
         sequelize = new Sequelize({
             dialect: 'sqlite',
-            storage: 'memory',
+            //storage: 'memory',
             logging: false,
-            sync: { force: true },
+            //sync: { force: true },
         });
 
         sequelize.addModels([CustomerModel]);

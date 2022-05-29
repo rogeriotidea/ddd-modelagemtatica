@@ -9,9 +9,9 @@ describe("Product Repository Test", () => {
     beforeEach(async() => {
         sequelize = new Sequelize({
             dialect: 'sqlite',
-            storage: 'memory',
-            logging: false,
-            sync: { force: true },
+            //storage: 'memory',
+            logging: true,
+            //sync: { force: true },
         });
 
         sequelize.addModels([ProductModel]);

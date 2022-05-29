@@ -1,4 +1,4 @@
-import Address from "./adress";
+import Address from "../value-object/adress";
 
 export default class Customer {
     private _id: string;

@@ -4,14 +4,14 @@ import Customer from "../../../../domain/customer/entity/customer";
 import Order from "../../../../domain/checkout/entity/order";
 import OrderItem from "../../../../domain/checkout/entity/order_item";
 import Product from "../../../../domain/product/entity/product";
-import CustomerModel from "../../../customer/repository/sequelize/customer.model";
-import OrderItemModel from "./order-item.model";
-import ProductModel from "../../../product/repository/sequelize/product.model";
 
 import OrderRepository from "./order.repository";
 import ProductRepository from "../../../product/repository/sequelize/product.repository";
 import CustomerRepository from "../../../customer/repository/sequelize/customer.repository";
 import OrderModel from "./order.model";
+import CustomerModel from "../../../customer/repository/sequelize/customer.model";
+import OrderItemModel from "./order-item.model";
+import ProductModel from "../../../product/repository/sequelize/product.model";
 
 describe("Order Repository Test", () => {
     let sequelize: Sequelize;
@@ -19,9 +19,9 @@ describe("Order Repository Test", () => {
     beforeEach(async() => {
         sequelize = new Sequelize({
             dialect: 'sqlite',
-            storage: 'memory',
+            //storage: 'memory',
             logging: false,
-            sync: { force: true },
+            //sync: { force: true },
         });
 
         sequelize.addModels([CustomerModel, OrderModel, OrderItemModel, ProductModel]);
