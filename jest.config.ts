@@ -6,7 +6,7 @@
 export default {
 
   transform: {
-   // "^.+\.(t|j)sx?$": ["@swc/jest"]
+   "^.+\.(t|j)sx?$": ["@swc/jest"]
   },
 
   // All imported modules in your tests should be mocked automatically

@@ -30,7 +30,7 @@ describe("Test find customer use case", () => {
         const usecase = new FindCustomerUseCase(customerRepository);
 
         const customer = new Customer("123", "John");
-        const address = new Address("street", 123, "city", "zip");
+        const address = new Address("street", 123, "zip", "city");
         customer.changeAddress(address);
         await customerRepository.create(customer);
 
@@ -49,7 +49,7 @@ describe("Test find customer use case", () => {
             }
         }
 
-        const result = usecase.execute(input);
+        const result = await usecase.execute(input);
 
         expect(result).toEqual(output);
 
